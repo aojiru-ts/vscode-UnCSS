@@ -1,0 +1,55 @@
+{
+	"name": "vscode-uncss",
+	"displayName": "vscode-UnCSS",
+	"description": "Can use uncss with vscode",
+	"publisher": "aojiru-ts",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"css",
+		"html"
+		],
+	"bugs": {
+		"url": "https://github.com/aojiru-ts/vscode-UnCSS/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/aojiru-ts/vscode-UnCSS.git"
+	},
+	"activationEvents": [
+		"onCommand:extension.uncssFile",
+		"onCommand:extension.uncssUrl"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.uncssFile",
+				"title": "vscode-UnCSS: From HTML File"
+			},
+			{
+				"command": "extension.uncssUrl",
+				"title": "vscode-UnCSS: From URL"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"eslint": "^5.13.0",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"uncss": "^0.16.2"
+	}
+}
